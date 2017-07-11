@@ -1,14 +1,16 @@
-{% extends "base.html" %}
+ß{% extends "base.html" %}
 
 {% block content %}
 
-<h1>Add entry</h1>
-<form method="POST">
-    <label for="title">Title:</label>
-    <input type="text" name="title" value="{{ title }}"><p class="error">{{ title_error }}</p>
-    <label for="body">Entry:</label>
-    <input type="text" name="body" value="{{ body }}"><p class="error">{{ body_error }}</p>
-    <input type="submit" value="Submit" id="submit"/>
-</form>
+    <h1>Add entry</h1>
+    <form method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" value="{{ title }}">
+        <p class="error">{{ title_error }}</p>
+        <label for="body">Entry:</label>
+        <input type="text" name="body" value="{{ body }}">
+        <p class="error">{{ body_error }}</p>
+        <input type="submit" value="Submit" id="submit"/>
+    </form>
 
 {% endblock %}

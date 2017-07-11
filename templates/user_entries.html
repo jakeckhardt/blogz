@@ -1,12 +1,12 @@
-{% extends "base.html" %}
+ß{% extends "base.html" %}
 
 {% block content %}
 
-<h1>{{ name }}</h1>
+    <h1>{{ name }}</h1>
 
-{% for entry in user_entries %}
-<h2><a href="/blog?id={{ entry.id }}">{{ entry.title }}</a></h2>
-<p>{{ entry.body }}</p>
-{% endfor %}
+    {% for entry in user_entries %}
+        <h2><a href="/blog?id={{ entry.id }}">{{ entry.title }}</a></h2>
+        <p>{{ entry.body }}</p>
+    {% endfor %}
 
 {% endblock %}

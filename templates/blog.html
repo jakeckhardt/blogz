@@ -1,21 +1,21 @@
-{% extends "base.html" %}
+ß{% extends "base.html" %}
 
 {% block content %}
 
-<h1>Blog</h1>
+    <h1>Blog</h1>
 
-{% for entry in blog %}
+    {% for entry in blog %}
 
-<h2><a href="/blog?id={{ entry.id }}" >{{ entry.title }}</a></h2>
-<p>{{ entry.body }}</p>
+        <h2><a href="/blog?id={{ entry.id }}">{{ entry.title }}</a></h2>
+        <p>{{ entry.body }}</p>
 
-{% for user in users %}
-{% if entry.owner_id == user.id %}
-<p><a href="/blog?user={{ user.id }}">{{ user.username }}</p>
-{% endif %}
+        {% for user in users %}
+            {% if entry.owner_id == user.id %}
+                <p><a href="/blog?user={{ user.id }}">{{ user.username }}</p>
+            {% endif %}
 
-{% endfor %}
+        {% endfor %}
 
-{% endfor %}
+    {% endfor %}
 
 {% endblock %}

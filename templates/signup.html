@@ -1,16 +1,19 @@
-{% extends "base.html" %}
+ß{% extends "base.html" %}
 
 {% block content %}
 
-<h1>Sign up</h1>
-<form method="POST">
-    <label for="username">Username:</label>
-    <input type="text" name="username" value="{{ username }}"><p class="error">{{ username_error }}</p>
-    <label for="password">Password:</label>
-    <input type="password" name="password"><p class="error">{{ password_error }}</p>
-    <label for="v_password">Verify password:</label>
-    <input type="password" name="v_password"><p class="error">{{ v_password_error }}</p>
-    <input type="submit" value="Submit" id="submit"/>
-</form>
+    <h1>Sign up</h1>
+    <form method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" value="{{ username }}">
+        <p class="error">{{ username_error }}</p>
+        <label for="password">Password:</label>
+        <input type="password" name="password">
+        <p class="error">{{ password_error }}</p>
+        <label for="v_password">Verify password:</label>
+        <input type="password" name="v_password">
+        <p class="error">{{ v_password_error }}</p>
+        <input type="submit" value="Submit" id="submit"/>
+    </form>
 
 {% endblock %}

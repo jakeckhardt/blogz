@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Blogz</title>
-        <style type="text/css">
-            .error {
-                color: red;
-            }
-        </style>
-    </head>
-    <body>
-        <div style='float: right'>
-          <a href="/">Home</a> | <a href="/blog">Blog</a> {% if "username" in session %}| <a href="/newpost">Add entry</a> | <a href="/logout">Log out</a> {% endif %}{% if "username" not in session %} | <a href="/logon">Log in</a> | <a href="/signup">Sign up</a>{% endif %}
-        </div>
-        {% block content %}
-        {% endblock %}
+<head>
+    <title>Blogz</title>
+    <style type="text/css">
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div style='float: right'>
+    <a href="/">Home</a> | <a href="/blog">Blog</a> {% if "username" in session %}| <a href="/newpost">Add entry</a> |
+    <a href="/logout">Log out</a> {% endif %}{% if "username" not in session %} | <a href="/logon">Log in</a> |
+    <a href="/signup">Sign up</a>{% endif %}
+</div>
+{% block content %}
+{% endblock %}
 
-    </body>
+</body>
 </html>
